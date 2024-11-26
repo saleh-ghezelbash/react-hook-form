@@ -1,42 +1,38 @@
-import React from 'react';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TodoList from './components/TodoList';
-import TodoContext from './contexts/TodoContext'
-import AddTodo from './components/AddTodo';
-import Navbar from './components/Navbar';
-// import Navbar from './components/Navbar';
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import TodoList from "./components/TodoList";
+// import TodoContext from "./contexts/TodoContext";
+// import AddTodo from "./components/AddTodo";
+
+// const App = () => {
+//   return (
+//     <div className="flex items-center justify-center h-screen bg-emerald-200">
+//       <TodoContext>
+//         <BrowserRouter>
+//           <Routes>
+//             <Route path="/">
+//               <Route index element={<TodoList />} />
+//               <Route path="/create" element={<AddTodo />} />
+//             </Route>
+//           </Routes>
+//         </BrowserRouter>
+//       </TodoContext>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import { Outlet } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <TodoContext>
-      {/* <Router>
-        <Navbar></Navbar>
-        <br />
-        <div className="uk-container">
-          <Switch>
-            <Route path="/create">
-              <AddTodo></AddTodo>
-            </Route>
-            <Route path="/">
-              <h4>Minha lista de tarefas</h4>
-              <TodoList></TodoList>
-            </Route>
-          </Switch>
-        </div>
-      </Router> */}
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            {/* <Navbar></Navbar>
-            <br /> */}
-            <Route index element={<TodoList />} />
-            <Route path="/create" element={<AddTodo />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </TodoContext>
+    <>
+      <Navbar />
+      <Outlet />
+    </>
   );
-}
+};
 
 export default App;

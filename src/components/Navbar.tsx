@@ -1,25 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    return (
-        <div className="uk-container">
-            <nav className="uk-navbar">
-                <div className="uk-navbar-left">
-                    <Link to="/" className="uk-navbar-item uk-logo">My Todos</Link>
-                </div>
-                <div className="uk-navbar-right">
-                    <ul className="uk-navbar-nav">
-                        <li>
-                            <Link to="/create">
-                                <span uk-icon="icon: plus; ratio: 1.2"></span>
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+  return (
+    <div className="mx-auto w-[700px] bg-slate-100 rounded-sm mt-1 mb-8 ">
+      <nav className="flex justify-between items-center py-4 px-6">
+        <div>
+          <Link to="/" className="font-bold text-xl">
+            خانه
+          </Link>
         </div>
-    );
-}
+        <div className="">
+          <Link
+            to="/create"
+            className="hover:bg-green-300 py-2 px-3 rounded-lg font-bold"
+          >
+            جدید
+          </Link>
+        </div>
+      </nav>
+    </div>
+  );
+};
 
 export default Navbar;
