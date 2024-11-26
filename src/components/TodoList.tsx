@@ -11,11 +11,11 @@ const TodoList = () => {
         <>
             {/* <Navbar /> */}
             <table className="uk-table">
-                <caption>Lista de tarefas</caption>
+                <caption>لیست کارها</caption>
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Tarefa</th>
+                        <th>عنوان</th>
                         <th></th>
                     </tr>
                 </thead>

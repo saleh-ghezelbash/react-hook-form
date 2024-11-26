@@ -29,7 +29,7 @@ const TodoListItem = (props: TodoListItemProps) => {
             </td>
             <td className="uk-width-expand">{props.todo.title}</td>
             <td className="uk-width-auto">
-                <button className="uk-icon-button uk-button-danger" onClick={() => onRemove(props.todo)} uk-icon="trash"></button>
+                <button className="uk-icon-button uk-button-danger" onClick={() => onRemove(props.todo)} uk-icon="trash">X</button>
             </td>
         </tr>
     );
