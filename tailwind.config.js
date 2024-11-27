@@ -4,6 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      main: [
+        'Vazir',
+      ]
+    },
     extend: {},
   },
   plugins: [],

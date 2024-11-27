@@ -4,35 +4,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import TodoList from "./components/TodoList";
-import AddTodo from "./components/AddTodo";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <TodoList />,
-      },
-      {
-        path: "/create",
-        element: <AddTodo />,
-      },
-    ],
-  },
-]);
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}>
       <App />
-    </RouterProvider>
   </React.StrictMode>
 );
 

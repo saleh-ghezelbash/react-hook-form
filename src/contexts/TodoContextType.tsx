@@ -1,4 +1,6 @@
-import { Todo } from "../models/Todo";
+// import { Todo } from "../models/Todo";
+
+import { Todo } from "../services/TodoService";
 
 
 export interface TodoContextType {

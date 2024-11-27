@@ -1,4 +1,10 @@
-import { Todo } from "../models/Todo";
+// import { Todo } from "../models/Todo";
+
+export interface Todo {
+    id: number;
+    title: string;
+    done: boolean;
+}
 
 const TODO_STORE = 'todos';
 

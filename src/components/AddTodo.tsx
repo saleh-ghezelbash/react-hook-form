@@ -29,11 +29,11 @@ const AddTodo = () => {
   const onSubmit = (data: AddTodoForm, e: any) => {
     addTodo(data.title);
     e.target.reset();
-    window.location.href = "/";
+    navigate("/")
   };
 
   return (
-    <div className="mx-auto w-[700px] rounded-lg flex justify-center">
+    <div className="mx-auto w-[700px] rounded-lg flex justify-center my-4">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="rounded-lg bg-gray-200 w-80 p-4"
@@ -56,6 +56,12 @@ const AddTodo = () => {
           </span>
         </div>
         <div className="w-full mt-4 flex gap-1">
+        <button
+            type="submit"
+            className="bg-cyan-600 hover:bg-cyan-800 text-white block w-full font-bold border rounded-lg text-lg px-3 py-2"
+          >
+            افزودن
+          </button>
           <button
             onClick={() => {
               navigate("/");
@@ -63,12 +69,6 @@ const AddTodo = () => {
             className="bg-red-300 hover:bg-red-500 text-white block w-full font-bold border rounded-lg text-lg px-3 py-2"
           >
             کنسل
-          </button>
-          <button
-            type="submit"
-            className="bg-cyan-600 hover:bg-cyan-800 text-white block w-full font-bold border rounded-lg text-lg px-3 py-2"
-          >
-            افزودن
           </button>
         </div>
       </form>

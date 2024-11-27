@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { Todo } from "../models/Todo";
+// import { Todo } from "../models/Todo";
 import { TodoContext } from "../contexts/TodoContext";
 import { TodoContextType } from "../contexts/TodoContextType";
+import { Todo } from "../services/TodoService";
 
 interface TodoListItemProps {
   todo: Todo;
@@ -23,9 +24,9 @@ const TodoListItem = (props: TodoListItemProps) => {
       className="flex gap-1 my-2 p-2 rounded-md bg-gray-200"
       id={props.todo.id.toString()}
     >
-      <div className="flex gap-1 mr-auto">
+      <div className="flex gap-1 ml-auto">
         <input
-          className="w-5 mr-2"
+          className="w-5 ml-2"
           type="checkbox"
           checked={props.todo.done}
           onChange={handleChange}
