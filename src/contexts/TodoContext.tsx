@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
 import { TodoContextType } from './TodoContextType';
-// import { Todo } from '../models/Todo';
 import { get, save, Todo } from '../services/TodoService';
 
 export const TodoContext = createContext<TodoContextType>({

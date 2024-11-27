@@ -1,4 +1,3 @@
-// import { Todo } from "../models/Todo";
 
 export interface Todo {
     id: number;

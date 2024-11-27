@@ -1,5 +1,4 @@
 import { useContext } from "react";
-// import { Todo } from "../models/Todo";
 import { TodoContext } from "../contexts/TodoContext";
 import { TodoContextType } from "../contexts/TodoContextType";
 import { Todo } from "../services/TodoService";
